@@ -250,3 +250,5 @@ img:last-of-type {
   color: var(--title-color);
   text-shadow: 2px 2px var(--accent-color);
 }
+
+@media 
