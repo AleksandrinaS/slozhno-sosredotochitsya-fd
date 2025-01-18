@@ -14,9 +14,12 @@
 
 .header {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center; 
+  align-items: center;
+  padding-inline: 10px;
   background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
@@ -75,17 +78,16 @@
 }
 
 .header__theme-menu {
-  align-self: self-end;
-  margin-inline-end: 10px;
-  margin-block-start: 10px;
+  grid-column: 1/1;
+  grid-row: 1/1;
+  justify-self: self-end;
+  
+  margin-block-start: 20px;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  inline-size: 70px;
-  block-size: 98px;
   font-family: var(--main-font-family), sans-serif;
   font-size: var(--text-size);
   font-weight: normal;
@@ -125,8 +127,9 @@
 }
 
 .header-title {
-  justify-self: center;
-  transform: translate(10px, 5px);
+  grid-column: 1/1;
+  grid-row: 2/2;
+  margin-block-start: 5px;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
@@ -141,18 +144,16 @@
 }
 
 .header-text {
-  display: inline-block;
+  grid-column: 1/1;
+  grid-row: 3/3;
   align-self: center;
-  inline-size: 94.66%;
+  margin-block-end: 20px;
+  inline-size: 100%;
   block-size: min-content;
   min-block-size: 117px;
   font-size: inherit;
   line-height: 130%;
   font-weight: bold;
-}
-
-.content {
-
 }
 
 .section {
@@ -251,4 +252,51 @@ img:last-of-type {
   text-shadow: 2px 2px var(--accent-color);
 }
 
-@media 
+@media (width >= 780px) {
+  .header {
+    padding-inline-end: 20px;
+    padding-inline-start: 10px;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: 1fr 99px 1fr;
+    grid-template-areas: 
+    ". . . theme-menu"
+    "title title title ."
+    ". . text text";
+  }
+
+  .header__theme-menu {
+    grid-area: theme-menu;
+  }
+
+  .header-title {
+    grid-area: title;
+    text-wrap: nowrap;
+  }
+
+  .header-text {
+    grid-area: text;
+    margin-inline-start: 5px;
+    line-height: 130%;
+  }
+
+  .section {
+    margin-block-start: 60px;
+    margin-inline: 20px;
+  }
+
+  .column-section {
+    display: grid;
+    grid-template-columns: 256px 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .title-column {
+    grid-column: 1/1;
+    grid-row: 1/auto;
+  }
+
+  .article {
+    grid-column: 2/3;
+    grid-row: 1/auto;
+  }
+}
