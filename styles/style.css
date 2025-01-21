@@ -242,7 +242,7 @@ img:last-of-type {
   justify-content: center;
   align-items: center;
   margin-block-start: 40px;
-  min-block-size: 100vh;
+  block-size: 100vh;
 }
 
 .footer-title {
