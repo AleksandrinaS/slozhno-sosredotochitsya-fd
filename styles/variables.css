@@ -13,4 +13,5 @@
   --regular-text-weight: normal;
   --bold-text-weight: bold;
   --bg-image: url(../images/cover-image-dark.png);
+  --button-hover-color: rgb(255, 0, 112, 0.4);
 }

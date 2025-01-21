@@ -14,11 +14,8 @@
   --text-color: #353430;
   --bg-color: #FFF1F7;
   --title-color: #ffc2e6;
-  --main-font-family: 'IBM Plex Mono';
-  --text-size: 18px;
-  --regular-text-weight: normal;
-  --bold-text-weight: bold;
   --bg-image: url(../images/cover-image-light.png);
+  --button-hover-color: rgb(50, 49, 45, 0.4);
 }
 
 .theme-light .decoration-rec {
@@ -46,11 +43,8 @@
     --text-color: #353430;
     --bg-color: #FFF1F7;
     --title-color: #ffc2e6;
-    --main-font-family: 'IBM Plex Mono';
-    --text-size: 18px;
-    --regular-text-weight: normal;
-    --bold-text-weight: bold;
     --bg-image: url(../images/cover-image-light.png);
+    --button-hover-color: rgb(50, 49, 45, 0.4);
   }
   
   .theme-light .decoration-rec {
