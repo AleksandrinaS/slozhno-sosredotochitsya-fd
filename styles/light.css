@@ -10,10 +10,16 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #ff8dcb;
+  --theme-menu-color: #353430;
   --text-dark-color: #353430;
+  --decoration: #353430;
   --text-color: #353430;
+  --decoration-color: #353430;
+  --section-title-color: #353430;
+  --text-dark-color: #353430;
   --bg-color: #FFF1F7;
   --title-color: #ffc2e6;
+  --footer-accent-color: #ff8dcb;
   --bg-image: url(../images/cover-image-light.png);
   --button-hover-color: rgb(50, 49, 45, 0.4);
 }
@@ -22,40 +28,20 @@
   display: none;
 }
 
-.theme-light .decorated-zone::before, .theme-light .decorated-zone::after, .theme-light .header__theme-menu, .theme-light .section-title {
-  --accent-color: #353430;
-}
-
-.theme-light .footer-title {
-  --accent-color: #ff0070;
-}
-
-@media (width < 1024px) {
-  .theme-light .footer-title {
-    --accent-color: #ff8dcb;
-  }
-}
-
 @media (prefers-color-scheme: light) {
   :root.theme-light {
     --accent-color: #ff8dcb;
+    --theme-menu-color: #353430;
     --text-dark-color: #353430;
+    --decoration: #353430;
     --text-color: #353430;
+    --decoration-color: #353430;
+    --section-title-color: #353430;
+    --text-dark-color: #353430;
     --bg-color: #FFF1F7;
     --title-color: #ffc2e6;
+    --footer-accent-color: #ff8dcb;
     --bg-image: url(../images/cover-image-light.png);
     --button-hover-color: rgb(50, 49, 45, 0.4);
-  }
-  
-  .theme-light .decoration-rec {
-    display: none;
-  }
-  
-  .theme-light .decorated-zone::before, .theme-light .decorated-zone::after, .theme-light .header__theme-menu, .theme-light .section-title {
-    --accent-color: #353430;
-  }
-  
-  .theme-light .footer-title {
-    --accent-color: #ff0070;
-  }
+}
 }
